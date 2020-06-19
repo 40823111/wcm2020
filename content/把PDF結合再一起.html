@@ -143,7 +143,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='40823111.html'>40823111</a><li><a href='Develop.html'>Develop</a></li>
+                     <li><a href='40823111.html'>40823111</a><li class='has-children'><a href='上課內容.html'>上課內容</a><ul class='dropdown'><li class='has-children'><a href='W10-W11.html'>W10-W11</a><ul class='dropdown'><li><a href='python.html'>python</a></li></ul><li class='has-children'><a href='PyPDF2.html'>PyPDF2</a><ul class='dropdown'><li><a href='把1個PDF可以解取幾頁到幾頁.html'>把1個PDF可以解取幾頁到幾頁</a><li><a href='把1個PDF 可以解取多個分段.html'>把1個PDF 可以解取多個分段</a><li><a href='把PDF結合再一起.html'>把PDF結合再一起</a></li>
                       </ul>
                 </nav>
               </div>
@@ -154,10 +154,53 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">40823111 << <a href='40823111.html'>Previous</a> <br /><h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p><br />40823111 << <a href='40823111.html'>Previous</a> </div>
+    <div id="tipue_search_content">把1個PDF 可以解取多個分段 << <a href='把1個PDF 可以解取多個分段.html'>Previous</a> <br /><h1>把PDF結合再一起</h1>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+<div class="line number13 index12 alt2">13</div>
+<div class="line number14 index13 alt1">14</div>
+<div class="line number15 index14 alt2">15</div>
+<div class="line number16 index15 alt1">16</div>
+<div class="line number17 index16 alt2">17</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py comments"># pypdf2_ex3.py</code></div>
+<div class="line number2 index1 alt1"><code class="py comments"># merge several pdf files</code></div>
+<div class="line number3 index2 alt2"><code class="py keyword">import</code> <code class="py plain">sys</code></div>
+<div class="line number4 index3 alt1"><code class="py keyword">import</code> <code class="py plain">PyPDF2</code></div>
+<div class="line number5 index4 alt2"> </div>
+<div class="line number6 index5 alt1"><code class="py plain">pdf_write_object </code><code class="py keyword">=</code> <code class="py plain">PyPDF2.PdfFileWriter()</code></div>
+<div class="line number7 index6 alt2"> </div>
+<div class="line number8 index7 alt1"><code class="py comments">#for i in sys.argv[1:]:</code></div>
+<div class="line number9 index8 alt2"><code class="py keyword">for</code> <code class="py plain">i </code><code class="py keyword">in</code> <code class="py plain">[</code><code class="py string">"WhatIsCMS.pdf"</code><code class="py plain">,</code><code class="py string">"InforLifeCycle.pdf"</code><code class="py plain">,</code><code class="py string">"EnterpriseContentManage.pdf"</code><code class="py plain">]:</code></div>
+<div class="line number10 index9 alt1"><code class="py spaces">    </code><code class="py plain">pdf_read_object </code><code class="py keyword">=</code> <code class="py plain">PyPDF2.PdfFileReader(i)</code></div>
+<div class="line number11 index10 alt2"><code class="py spaces">    </code><code class="py functions">print</code><code class="py plain">(</code><code class="py string">'processing file : '</code><code class="py keyword">+</code> <code class="py plain">i </code><code class="py keyword">+</code> <code class="py string">'number of pages : '</code> <code class="py keyword">+</code>  <code class="py functions">str</code><code class="py plain">(pdf_read_object.numPages))</code></div>
+<div class="line number12 index11 alt1"><code class="py spaces">    </code><code class="py keyword">for</code> <code class="py plain">page </code><code class="py keyword">in</code> <code class="py functions">range</code><code class="py plain">(pdf_read_object.numPages):</code></div>
+<div class="line number13 index12 alt2"><code class="py spaces">        </code><code class="py plain">pdf_write_object.addPage(pdf_read_object.getPage(page))</code></div>
+<div class="line number14 index13 alt1"> </div>
+<div class="line number15 index14 alt2"><code class="py plain">final_file_object </code><code class="py keyword">=</code> <code class="py functions">open</code><code class="py plain">(</code><code class="py string">'2020CMS.pdf'</code><code class="py plain">, </code><code class="py string">'wb'</code><code class="py plain">)</code></div>
+<div class="line number16 index15 alt1"><code class="py plain">pdf_write_object.write(final_file_object)</code></div>
+<div class="line number17 index16 alt2"><code class="py plain">final_file_object.close()</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table><br />把1個PDF 可以解取多個分段 << <a href='把1個PDF 可以解取多個分段.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
