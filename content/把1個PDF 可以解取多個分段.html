@@ -143,7 +143,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='40823111.html'>40823111</a><li class='has-children'><a href='上課內容.html'>上課內容</a><ul class='dropdown'><li class='has-children'><a href='W10-W11.html'>W10-W11</a><ul class='dropdown'><li><a href='python.html'>python</a></li></ul><li class='has-children'><a href='PyPDF2.html'>PyPDF2</a><ul class='dropdown'><li><a href='把1個PDF可以解取幾頁到幾頁.html'>把1個PDF可以解取幾頁到幾頁</a><li><a href='把1個PDF 可以解取多個分段.html'>把1個PDF 可以解取多個分段</a><li><a href='把PDF結合再一起.html'>把PDF結合再一起</a></li>
+                     <li><a href='40823111.html'>40823111</a><li class='has-children'><a href='上課內容.html'>上課內容</a><ul class='dropdown'><li class='has-children'><a href='W10-W11.html'>W10-W11</a><ul class='dropdown'><li><a href='python.html'>python</a></li></ul><li class='has-children'><a href='W12.html'>W12</a><ul class='dropdown'><li><a href='把1個PDF可以解取幾頁到幾頁.html'>把1個PDF可以解取幾頁到幾頁</a><li><a href='把1個PDF 可以解取多個分段.html'>把1個PDF 可以解取多個分段</a><li><a href='把PDF結合再一起.html'>把PDF結合再一起</a></li></ul><li><a href='W13-W14.html'>W13-W14</a></li>
                       </ul>
                 </nav>
               </div>
@@ -155,57 +155,26 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">把1個PDF可以解取幾頁到幾頁 << <a href='把1個PDF可以解取幾頁到幾頁.html'>Previous</a> <a href='把PDF結合再一起.html'>Next</a> >> 把PDF結合再一起<br /><h1>把1個PDF 可以解取多個分段</h1>
-<table border="0" cellpadding="0" cellspacing="0">
-<tbody>
-<tr>
-<td class="gutter">
-<div class="line number1 index0 alt2">1</div>
-<div class="line number2 index1 alt1">2</div>
-<div class="line number3 index2 alt2">3</div>
-<div class="line number4 index3 alt1">4</div>
-<div class="line number5 index4 alt2">5</div>
-<div class="line number6 index5 alt1">6</div>
-<div class="line number7 index6 alt2">7</div>
-<div class="line number8 index7 alt1">8</div>
-<div class="line number9 index8 alt2">9</div>
-<div class="line number10 index9 alt1">10</div>
-<div class="line number11 index10 alt2">11</div>
-<div class="line number12 index11 alt1">12</div>
-<div class="line number13 index12 alt2">13</div>
-<div class="line number14 index13 alt1">14</div>
-<div class="line number15 index14 alt2">15</div>
-<div class="line number16 index15 alt1">16</div>
-<div class="line number17 index16 alt2">17</div>
-<div class="line number18 index17 alt1">18</div>
-<div class="line number19 index18 alt2">19</div>
-</td>
-<td class="code">
-<div class="container">
-<div class="line number1 index0 alt2"><code class="py comments"># pypdf2_ex2.py</code></div>
-<div class="line number2 index1 alt1"><code class="py keyword">import</code> <code class="py plain">os</code></div>
-<div class="line number3 index2 alt2"><code class="py keyword">from</code> <code class="py plain">PyPDF2 </code><code class="py keyword">import</code> <code class="py plain">PdfFileWriter, PdfFileReader</code></div>
-<div class="line number4 index3 alt1"> </div>
-<div class="line number5 index4 alt2"><code class="py plain">pdfReader </code><code class="py keyword">=</code> <code class="py plain">PdfFileReader(</code><code class="py functions">open</code><code class="py plain">(</code><code class="py string">"Beginning-Git-and-GitHub.pdf"</code><code class="py plain">, </code><code class="py string">"rb"</code><code class="py plain">))</code></div>
-<div class="line number6 index5 alt1"><code class="py plain">information </code><code class="py keyword">=</code> <code class="py plain">[(</code><code class="py string">"GitAndGithub"</code><code class="py plain">,</code><code class="py value">17</code><code class="py plain">,</code><code class="py value">105</code><code class="py plain">),(</code><code class="py string">"GitAndGithub"</code><code class="py plain">,</code><code class="py value">107</code><code class="py plain">,</code><code class="py value">194</code><code class="py plain">),(</code><code class="py string">"GitAndGithub"</code><code class="py plain">,</code><code class="py value">196</code><code class="py plain">,</code><code class="py value">289</code><code class="py plain">)]</code></div>
-<div class="line number7 index6 alt2"> </div>
-<div class="line number8 index7 alt1"><code class="py keyword">for</code> <code class="py plain">page </code><code class="py keyword">in</code> <code class="py functions">range</code><code class="py plain">(</code><code class="py functions">len</code><code class="py plain">(information)):</code></div>
-<div class="line number9 index8 alt2"><code class="py spaces">    </code><code class="py plain">pdf_writer </code><code class="py keyword">=</code> <code class="py plain">PdfFileWriter()</code></div>
-<div class="line number10 index9 alt1"><code class="py spaces">    </code><code class="py plain">start </code><code class="py keyword">=</code> <code class="py plain">information[page][</code><code class="py value">1</code><code class="py plain">]</code></div>
-<div class="line number11 index10 alt2"><code class="py spaces">    </code><code class="py plain">end </code><code class="py keyword">=</code> <code class="py plain">information[page][</code><code class="py value">2</code><code class="py plain">]</code></div>
-<div class="line number12 index11 alt1"><code class="py spaces">    </code><code class="py keyword">while</code> <code class="py plain">start&lt;</code><code class="py keyword">=</code><code class="py plain">end:</code></div>
-<div class="line number13 index12 alt2"><code class="py spaces">        </code><code class="py plain">pdf_writer.addPage(pdfReader.getPage(start</code><code class="py keyword">-</code><code class="py value">1</code><code class="py plain">))</code></div>
-<div class="line number14 index13 alt1"><code class="py spaces">        </code><code class="py plain">start</code><code class="py keyword">+</code><code class="py keyword">=</code><code class="py value">1</code></div>
-<div class="line number15 index14 alt2"><code class="py spaces">    </code><code class="py keyword">if</code> <code class="py keyword">not</code> <code class="py plain">os.path.exists(</code><code class="py string">"./"</code><code class="py plain">):</code></div>
-<div class="line number16 index15 alt1"><code class="py spaces">        </code><code class="py plain">os.makedirs(savepath)</code></div>
-<div class="line number17 index16 alt2"><code class="py spaces">    </code><code class="py plain">output_filename </code><code class="py keyword">=</code> <code class="py string">'{}_{}_page_{}.pdf'</code><code class="py plain">.</code><code class="py functions">format</code><code class="py plain">(information[page][</code><code class="py value">0</code><code class="py plain">],information[page][</code><code class="py value">1</code><code class="py plain">], information[page][</code><code class="py value">2</code><code class="py plain">])</code></div>
-<div class="line number18 index17 alt1"><code class="py spaces">    </code><code class="py plain">with </code><code class="py functions">open</code><code class="py plain">(output_filename,</code><code class="py string">'wb'</code><code class="py plain">) as out:</code></div>
-<div class="line number19 index18 alt2"><code class="py spaces">        </code><code class="py plain">pdf_writer.write(out)</code></div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-<br />把1個PDF可以解取幾頁到幾頁 << <a href='把1個PDF可以解取幾頁到幾頁.html'>Previous</a> <a href='把PDF結合再一起.html'>Next</a> >> 把PDF結合再一起</div>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false"># pypdf2_ex2.py
+import os
+from PyPDF2 import PdfFileWriter, PdfFileReader
+ 
+pdfReader = PdfFileReader(open("Beginning-Git-and-GitHub.pdf", "rb"))
+information = [("GitAndGithub",17,105),("GitAndGithub",107,194),("GitAndGithub",196,289)]
+ 
+for page in range(len(information)):
+    pdf_writer = PdfFileWriter()
+    start = information[page][1]
+    end = information[page][2]
+    while start&lt;=end:
+        pdf_writer.addPage(pdfReader.getPage(start-1))
+        start+=1
+    if not os.path.exists("./"):
+        os.makedirs(savepath)
+    output_filename = '{}_{}_page_{}.pdf'.format(information[page][0],information[page][1], information[page][2])
+    with open(output_filename,'wb') as out:
+        pdf_writer.write(out)
+</pre><br />把1個PDF可以解取幾頁到幾頁 << <a href='把1個PDF可以解取幾頁到幾頁.html'>Previous</a> <a href='把PDF結合再一起.html'>Next</a> >> 把PDF結合再一起</div>
         
     <!-- footer -->
       <div class="container">
