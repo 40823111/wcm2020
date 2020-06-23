@@ -143,7 +143,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='40823111.html'>40823111</a><li class='has-children'><a href='上課內容.html'>上課內容</a><ul class='dropdown'><li class='has-children'><a href='W10-W11.html'>W10-W11</a><ul class='dropdown'><li><a href='python.html'>python</a><li><a href='加入ssh.html'>加入ssh</a></li></ul><li class='has-children'><a href='W12.html'>W12</a><ul class='dropdown'><li><a href='把1個PDF可以解取幾頁到幾頁.html'>把1個PDF可以解取幾頁到幾頁</a><li><a href='把1個PDF 可以解取多個分段.html'>把1個PDF 可以解取多個分段</a><li><a href='把PDF結合再一起.html'>把PDF結合再一起</a></li></ul><li><a href='W13-W15.html'>W13-W15</a><li><a href='W16-W17.html'>W16-W17</a></li>
+                     <li><a href='40823111.html'>40823111</a><li class='has-children'><a href='上課內容.html'>上課內容</a><ul class='dropdown'><li class='has-children'><a href='W10-W11.html'>W10-W11</a><ul class='dropdown'><li><a href='python.html'>python</a></li></ul><li class='has-children'><a href='W12.html'>W12</a><ul class='dropdown'><li><a href='把1個PDF可以解取幾頁到幾頁.html'>把1個PDF可以解取幾頁到幾頁</a><li><a href='把1個PDF 可以解取多個分段.html'>把1個PDF 可以解取多個分段</a><li><a href='把PDF結合再一起.html'>把PDF結合再一起</a></li></ul><li><a href='W13-W15.html'>W13-W15</a><li><a href='W16-W17.html'>W16-W17</a></li></ul><li><a href='加入ssh.html'>加入ssh</a><li><a href='網頁Cmsimde 建立方法.html'>網頁Cmsimde 建立方法</a></li>
                       </ul>
                 </nav>
               </div>
@@ -154,7 +154,7 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">python << <a href='python.html'>Previous</a> <a href='W12.html'>Next</a> >> W12<br /><h1>加入ssh</h1>
+    <div id="tipue_search_content">W16-W17 << <a href='W16-W17.html'>Previous</a> <a href='網頁Cmsimde 建立方法.html'>Next</a> >> 網頁Cmsimde 建立方法<br /><h1>加入ssh</h1>
 <p><strong>創建SSH的Key</strong></p>
 <p><span>(1)利用編輯器進入shell的命令環境</span><img alt="" height="531" src="./../images/102.jpg" width="1012"/></p>
 <p>(2)輸入指令</p>
@@ -162,22 +162,69 @@ img.add_border {
 <p> <img alt="" height="511" src="./../images/100jpg.jpg" width="976"/></p>
 <p><span>在 /y/tmp/key/id_rsa (自己設要放在哪裡)目錄下建立 id_rsa 與 id_rsa.pub 等 private key 與 public key</span></p>
 <p><span><img alt="" height="795" src="./../images/101.jpg" width="1122"/></span></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p>download  putty</p>
+<p><span>(3)下載 Putty 工具組</span></p>
+<p><span>接下來要利用 puttygen.exe </span></p>
 <p><img alt="" height="547" src="./../images/1592617751496.jpg" width="577"/></p>
-<p>進入putty.exe 進行編輯</p>
-<p><img alt="" height="442" src="./../images/擷取.JPG-1.jpg" width="452"/></p><br />python << <a href='python.html'>Previous</a> <a href='W12.html'>Next</a> >> W12</div>
+<p>load(載入)  <span>將 id_rsa 轉為 Putty 可以解讀的 .ppk 格式 並且 Save private key</span></p>
+<p><span><img alt="" height="465" src="./../images/104.jpg" width="516"/></span></p>
+<p><span>(4)開啟 github settings 中的 SSH and GPD keys</span></p>
+<p><span><img alt="" height="356" src="./../images/105.jpg" width="221"/></span></p>
+<p><span>新建New Key  把public key的碼放入(用scite 開啟)</span></p>
+<p><span><img alt="" height="366" src="./../images/106jpg.jpg" width="768"/></span></p>
+<p>(5)<span>修改啟動的 start.bat 加入下列設定</span></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">set GIT_HOME=%Disk%:\portablegit\bin\
+set GIT_SSH=%Disk%:\putty\plink.exe</pre>
+<p><b>設定putty</b> </p>
+<p><span>(1)home 下的 .ssh 目錄中的 config 設定檔案為</span></p>
+<p><span><img alt="" height="383" src="./../images/107.jpg" width="561"/></span></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false"># no proxy at home
+#ProxyCommand y:/PortableGit/mingw64/bin/connect.exe -H proxy.mde.nfu.edu.tw:3128 %h %p
+# set git_ssh=y:/putty/plink.exe with auth under putty github.com session setup
+ProxyCommand y:/putty/plink.exe github.com %h %p
+  
+Host github.com
+    User git
+    Port 22
+    Hostname github.com
+     
+    # for connect.exe need openssh key format
+    #IdentityFile "y:\home\.ssh\id_rsa_mdecourse"
+    # for plink.exe need rsa key format but set under putty github.com session
+    # plink.exe do not need the following setting
+    #IdentityFile "y:\home\.ssh\mdecourse_putty_private.ppk"
+  
+    TCPKeepAlive yes
+    IdentitiesOnly yes</pre>
+<p><span>(2)wcm2020 倉儲中 .git 目錄下的 config 檔案中的連線協定, 由 https 改為採 ssh 連      線</span></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">[core]
+    repositoryformatversion = 0
+    filemode = false
+    bare = false
+    logallrefupdates = true
+    symlinks = false
+    ignorecase = true
+[submodule]
+    active = .
+[remote "origin"]
+    #url = https://github.com/mdecourse/wcmj2020.git
+    url = git@github.com:mdecourse/wcmj2020.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
+[submodule "cmsimde"]
+    url = https://github.com/mdecourse/cmsimde.git</pre>
+<p>(3)進入putty.exe 進行編輯<br/><span></span></p>
+<p>設定代理主機<br/><span></span></p>
+<p><span></span></p>
+<p><img alt="" height="442" src="./../images/擷取.JPG-1.jpg" width="452"/><br/><span></span></p>
+<p><span>設定代理主機(Proxy)  除非是IPV4 IPV6</span></p>
+<p><span><img alt="" height="431" src="./../images/108.jpg" width="481"/></span></p>
+<p><span>設定SSH的 ppk private key (之前轉的APK)</span></p>
+<p><span><img alt="" height="433" src="./../images/109.jpg" width="477"/></span></p>
+<p><span>之後就可以透過近端的 .ppk private key 與 Github.com 上的 public key 對應, 無需輸入帳號密碼就可以進行 git push</span></p>
+<p><span></span></p>
+<br />W16-W17 << <a href='W16-W17.html'>Previous</a> <a href='網頁Cmsimde 建立方法.html'>Next</a> >> 網頁Cmsimde 建立方法</div>
         
     <!-- footer -->
       <div class="container">

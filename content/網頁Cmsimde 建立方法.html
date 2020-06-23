@@ -154,157 +154,23 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">W10-W11 << <a href='W10-W11.html'>Previous</a> <a href='W12.html'>Next</a> >> W12<br /><h1>python</h1>
-<p>說明如何利用 Python 程式讀取同學修課檔案</p>
-<div class="line number1 index0 alt2"><code class="py keyword"></code></div>
-<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">import csv
- 
-# read student list
- 
-filename = 'E:/wcm2020/data/tmp/2020_spring_score/2a/2a_list.txt'
-with open(filename, encoding="utf-8") as f:
-    content = f.readlines()
-#print(content)
-student = [x.strip() for x in content] 
-#print(student)
- 
- 
-# Timestamp, email, 修課名稱, url, score, desp, memo
-# 0, 1, 2, 3, 4, 5, 6
-#total = 0
-all = {}
-with open('y:/2020midterm.csv', encoding="utf-8") as csv_file:
-    csv_reader = csv.reader(csv_file, delimiter=',')
-    #print(csv_reader)
- 
-    line_count = 0
-    for row in csv_reader:
-        if line_count == 0:
-            #print(f'Column names are {", ".join(row)}')
-            line_count += 1
-        else:
-            student_num = row[1].split("@")[0]
-            #print(student_num)
-            student_score = row[4]
-            #print(student_score)
-            try:
-                all.update({student_num: student_score})
-            except:
-                all.update({student_num: "error"})
-            #print(f'\t{row[0]} works in the {row[1]} department, and was born in {row[2]}.')
-            #print(f'\t{row[4]}')
-            #total += int(row[4])
-            line_count += 1
-#print(all)
-#print(student)
- 
- 
-for i in student:
-     
-    #if i in all:
-        #pass
-    #else:
-        #print(str(i))
-     
-    try:
-        print(i + "\t" + all[i])
-    except:
-        print(i + "\t60")
- 
-    #print(f'Processed {line_count} lines.')
-    #print("平均=" + str(total/line_count))</pre>
-<h4>flask 程式一:</h4>
-<div></div>
+    <div id="tipue_search_content">加入ssh << <a href='加入ssh.html'>Previous</a> <br /><h1>網頁Cmsimde 建立方法</h1>
+<p>(1)到github 新建一個repository(資料庫)</p>
+<p><img alt="" height="668" src="./../images/1592902479038.jpg" width="737"/></p>
+<p>(2)在隨身系統新建一個tmp資料夾 (wcm2020new/tmp)</p>
+<p><img alt="" height="793" src="./../images/1592903130613.jpg" width="1118"/></p>
+<p><span>(3)到github網站git clone自己倉儲的網址clone完後git submodule add</span></p>
+<p><img alt="" height="530" src="./../images/6.jpg" width="976"/></p>
 <p></p>
-<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">from flask import Flask
-  
-app = Flask(__name__)
-  
-@app.route('/') 
-def hello_world():
-    return 'Hello, From Flask!'
-  
-if __name__== '__main__': 
-    app.run()</pre>
+<p>(4)進入cmsimde  把up_dir裡的東西全部複製</p>
+<p><img alt="" height="798" src="./../images/9.jpg" width="1124"/></p>
+<p>放到cmsimde外面  wcm2020new的目錄下</p>
+<p><img alt="" height="799" src="./../images/3.jpg" width="1126"/></p>
+<p><img alt="" height="794" src="./../images/11.jpg" width="1121"/></p>
+<p><span>(5)進入cmsimde目錄下   將wsgi.py拖入SciTE     tools--&gt;go</span></p>
+<p><span><img alt="" height="937" src="./../images/2.jpg" width="851"/></span></p>
 <p></p>
-<p>Flask 程式二:</p>
-<div></div>
-<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">rom flask import Flask, render_template
-import ssl
-import csv
-  
-context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
-context.load_cert_chain('localhost.crt', 'localhost.key')
-  
-app = Flask(__name__)
-  
-@app.route('/') 
-def hello_world():
-    return 'Hello, From Flask!'
-  
-@app.route('/ROCflag')
-def drawROC():
-    return render_template("ROCflag.html")
- 
-@app.route("/midterm")
-def midterm():
-    # read student list
- 
-    filename = '1a_list.txt'
-    with open(filename, encoding="utf-8") as f:
-        content = f.readlines()
-    #print(content)
-    student = [x.strip() for x in content] 
-    #print(student)
- 
- 
-    # Timestamp, email, 修課名稱, url, score, desp, memo
-    # 0, 1, 2, 3, 4, 5, 6
-    #total = 0
-    all = {}
-    with open('2020midterm.csv', encoding="utf-8") as csv_file:
-        csv_reader = csv.reader(csv_file, delimiter=',')
-        #print(csv_reader)
- 
-        line_count = 0
-        for row in csv_reader:
-            if line_count == 0:
-                #print(f'Column names are {", ".join(row)}')
-                line_count += 1
-            else:
-                student_num = row[1].split("@")[0]
-                #print(student_num)
-                student_score = row[3]
-                #print(student_score)
-                try:
-                    all.update({student_num: student_score})
-                except:
-                    all.update({student_num: "error"})
-                #print(f'\t{row[0]} works in the {row[1]} department, and was born in {row[2]}.')
-                #print(f'\t{row[4]}')
-                #total += int(row[4])
-                line_count += 1
-    #print(all)
-    #print(student)
- 
-    output = ""
-    for i in student:
-         
-        #if i in all:
-            #pass
-        #else:
-            #print(str(i))
-         
-        try:
-            output += (str(i) + ": <a href='/get_page/python/" + str(all[i]) + "'>"+ str(all[i]) + "</a><br/>")
-        except:
-            output += (str(i) + ": no data<br/>")
-         
-    return output
-      
-if __name__== '__main__': 
-    app.run(ssl_context=context)</pre>
-<br />W10-W11 << <a href='W10-W11.html'>Previous</a> <a href='W12.html'>Next</a> >> W12</div>
+<p></p><br />加入ssh << <a href='加入ssh.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
