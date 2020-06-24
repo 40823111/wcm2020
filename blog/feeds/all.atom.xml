@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>wcm2020</title><link href="https://40823111.github.io/wcm2020/blog/" rel="alternate"></link><link href="https://40823111.github.io/wcm2020/blog/feeds/all.atom.xml" rel="self"></link><id>https://40823111.github.io/wcm2020/blog/</id><updated>2020-06-24T20:06:00+08:00</updated><entry><title>Wcm2020 Ubuntu</title><link href="https://40823111.github.io/wcm2020/blog/wcm2020-32-bit-Windows.html" rel="alternate"></link><published>2020-06-24T20:06:00+08:00</published><updated>2020-06-24T20:06:00+08:00</updated><author><name>40823111</name></author><id>tag:40823111.github.io,2020-06-24:/wcm2020/blog/wcm2020-32-bit-Windows.html</id><summary type="html"></summary><content type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+&lt;hr&gt;
+&lt;p&gt;Ubuntu&lt;/p&gt;
+&lt;p&gt;是以桌面應用為主的Linux發行版，Ubuntu由Canonical公司發布，他們提供商業支援&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://1.bp.blogspot.com/-TzIfHUoeiKY/XvMW-6pEtMI/AAAAAAAAAC8/I4Kj-MHkPAcpoZDnBDFshttV4TqtuYfowCK4BGAsYHg/w500-h304/1.jpg" width="400" height="350" alt="ub" align=center&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;    安裝ubuntu 64位元版本  (可以安裝在電腦或虛擬電腦 VirtualBox )&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;VirtualBox&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://1.bp.blogspot.com/-42MP-wrmFck/XvMYJLDEAhI/AAAAAAAAADQ/eh3_rDScxxY4unB1mT8wpOuKRt7mb6SHwCK4BGAsYHg/w400-h228/VirtualBox-Logo.jpg" width="400" height="350" alt="ub" align=center&gt;&lt;/p&gt;
+&lt;p&gt;這個程式類似電腦主機 但一次可以建好幾個，意思是一台電腦裡有多個虛擬電腦&lt;/p&gt;
+&lt;p&gt;像我的ub-40823111(就是我建的一 個虛擬電腦)&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://1.bp.blogspot.com/-6NpIoQ_MqW8/XvMZIpMiVyI/AAAAAAAAADs/w1w-VFvKlB4319uGkD2pkb2Xj3GKJJzMgCK4BGAsYHg/w500-h300/1592989778496.jpg"width="400" height="350" alt="ub" align=center&gt;
+&lt;img src="https://1.bp.blogspot.com/-1mrPOM2flfc/XvMZ5UgOJrI/AAAAAAAAAEA/xna6TSIqHFAbgn7oYc9upUzFmr-i4GSNACK4BGAsYHg/w500-h300/1592990161200.jpg"width="400" height="350" alt="ub" align=center&gt;
+啟動後就會開始跑進跟電腦類似的畫面&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://1.bp.blogspot.com/-6ZwzFSUev-w/XvMa4uMD8vI/AAAAAAAAAEo/5p44QL9mu6QhXEyXNSl8frTnbfvVbt2AACK4BGAsYHg/w500-h370/1592990267877.jpg"width="400" height="350" alt="ub" align=center&gt;
+裡面有很多應用程式 那我們可以在這裡安裝 ubuntu
+&lt;img src="https://1.bp.blogspot.com/-8nK4rxbCT_Y/XvMa40bGFaI/AAAAAAAAAEs/Eg0BO7ASqmEudFJPwRdJhbZxT4OerO1JACK4BGAsYHg/w500-h376/1592990358335.jpg" width="400" height="350" alt="ub" align=center&gt;&lt;/p&gt;
+&lt;hr&gt;</content><category term="Misc"></category><category term="wcm2020"></category></entry></feed>
